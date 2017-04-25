@@ -96,8 +96,12 @@ body {
 .greenbg{
     background: rgba(51,232,128, .5);
 }
+playbg{
+    background: url(pics/bgGame.jpg) no-repeat center center fixed !important;
+    background-size: cover !important;
+}
 
-.gamebg{
+.workbg{
     background: url(pics/bgGame.jpg) no-repeat center center fixed !important;
     background-size: cover !important;
 }

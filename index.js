@@ -11,7 +11,8 @@ $(function () {
     var timerId = setInterval(timer, 1000);
 
     $("#work").addClass("greenbg");
-    $("body").addClass("gamebg");
+    $("body").addClass("workbg");
+    $("body").addClass("playbg");
 
     pauseBtn.addEventListener("click", function () {
         if (running) {
@@ -32,7 +33,7 @@ $(function () {
     workBtn.addEventListener("click", function () {
         $("#work").addClass("greenbg");
         $("#play").removeClass("greenbg");
-        $("#container").removeClass("gamebg");
+        $("#container").removeClass("playbg");
 
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
@@ -47,7 +48,7 @@ $(function () {
         $("#play").addClass("greenbg");
         $("#work").removeClass("greenbg");
 
-        $("#container").addClass("gamebg");
+        $("#container").addClass("playbg");
 
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
