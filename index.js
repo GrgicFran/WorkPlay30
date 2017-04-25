@@ -36,7 +36,9 @@ $(function () {
         $("#clock").html("30:00");
 
         clearInterval(timerId);
+        if(running){
         timerId = setInterval(timer, 1000);
+        }
     });
 
     playBtn.addEventListener("click", function () {
@@ -47,7 +49,10 @@ $(function () {
         $("#clock").html("30:00");
 
         clearInterval(timerId);
+        if(running){
         timerId = setInterval(timer, 1000);
+        }
+        
     });
 
     resetBtn.addEventListener("click", function () {
