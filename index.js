@@ -35,6 +35,7 @@ $(function () {
     workBtn.addEventListener("click", function () {
         $("#work").addClass("greenbg");
         $("#play").removeClass("greenbg");
+        
         $("#container").removeClass("playbg");
 
         countdown = 30 * 60 * 1000;
@@ -56,11 +57,9 @@ $(function () {
         $("#clock").html("30:00");
 
         clearInterval(timerId);
-        /*
         if (running) {
             timerId = setInterval(timer, 1000);
         }
-        */
 
     });
 
