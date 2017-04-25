@@ -37,6 +37,7 @@ body {
     width: 100vw;
     align-content: center;
     justify-content: center;
+    transition: all .5s ease;
 }
 
 #clock {
@@ -94,6 +95,11 @@ body {
 
 .greenbg{
     background: rgba(51,232,128, .5);
+}
+
+.gamebg{
+    background: url(pics/bgGame.jpg) no-repeat center center fixed !important;
+    background-size: cover !important;
 }
 
 @media only screen and (max-width: 1000px) {
