@@ -11,10 +11,8 @@ $(function () {
     var timerId = setInterval(timer, 1000);
 
     $("#work").addClass("greenbg");
-    $("body").addClass("workbg");
     $("body").addClass("playbg");
-    $("body").removeClass("workbg");
-    $("body").removeClass("playbg");
+    $("body").addClass("workbg");
 
     pauseBtn.addEventListener("click", function () {
         if (running) {
