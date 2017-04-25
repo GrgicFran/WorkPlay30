@@ -1,0 +1,82 @@
+body,
+article,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto;400');
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    background-color: #5377d7;
+}
+
+#container {
+    display: flex;
+    background: url(pics/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100vw;
+    align-content: center;
+    justify-content: center;
+}
+
+#clock {
+    font-size: 10em;
+    width: fit-content;
+    align-self: center;
+    color: white;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    /*box-shadow: rgba(28, 27, 24, 0.5) 0px 5px 14px 0px;*/
+    background: rgba(255,255,255, .2);
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family:'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 16px 33px;
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    margin: 20px;
+    transition: all .3s ease;
+}
+
+.greenbg{
+    background: rgba(51,232,128, .5);
+}
+
+#reset{
+    cursor: pointer;
+    color: white;
+    align-self: center;
+}
