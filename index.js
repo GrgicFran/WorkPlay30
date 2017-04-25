@@ -15,10 +15,14 @@ $(function () {
     pauseBtn.addEventListener("click", function () {
         if (running) {
             $("#pause").html("RESUME");
+            $("#pause").addClass("paused");
+
             running = false;
             clearInterval(timerId);
         } else {
             $("#pause").html("PAUSE");
+            $("#pause").removeClass("paused");
+
             running = true;
             timerId = setInterval(timer, 1000);
         }
@@ -49,6 +53,12 @@ $(function () {
     resetBtn.addEventListener("click", function () {
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
+
+        $("#reset").addClass("paused");
+
+        setTimeout(function () {
+            $('#reset').removeClass("paused");
+        }, 300);
     })
 
     function timer() {
