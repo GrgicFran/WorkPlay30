@@ -13,7 +13,10 @@ $(function () {
     $("#work").addClass("greenbg");
     $("body").addClass("workbg");
     $("body").addClass("playbg");
+    $("body").removeClass("workbg");
+    $("body").removeClass("playbg");
 
+    
     pauseBtn.addEventListener("click", function () {
         if (running) {
             $("#pause").html("RESUME");

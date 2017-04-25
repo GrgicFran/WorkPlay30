@@ -112,11 +112,11 @@ playbg{
     }
 
     .button{
-        font-size: 1.7em;
+        font-size: 1.3em;
     }
 
     .manipulation{
-        font-size: 1.2em;
+        font-size: 1em;
         min-width: 300px;
     }
 }
