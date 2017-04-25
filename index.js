@@ -16,7 +16,6 @@ $(function () {
     $("body").removeClass("workbg");
     $("body").removeClass("playbg");
 
-    
     pauseBtn.addEventListener("click", function () {
         if (running) {
             $("#pause").html("RESUME");
@@ -42,8 +41,8 @@ $(function () {
         $("#clock").html("30:00");
 
         clearInterval(timerId);
-        if(running){
-        timerId = setInterval(timer, 1000);
+        if (running) {
+            timerId = setInterval(timer, 1000);
         }
     });
 
@@ -57,10 +56,12 @@ $(function () {
         $("#clock").html("30:00");
 
         clearInterval(timerId);
-        if(running){
-        timerId = setInterval(timer, 1000);
+        /*
+        if (running) {
+            timerId = setInterval(timer, 1000);
         }
-        
+        */
+
     });
 
     resetBtn.addEventListener("click", function () {
@@ -74,8 +75,8 @@ $(function () {
         }, 300);
 
         clearInterval(timerId);
-        if(running){
-        timerId = setInterval(timer, 1000);
+        if (running) {
+            timerId = setInterval(timer, 1000);
         }
     })
 
