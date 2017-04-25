@@ -75,7 +75,7 @@ body {
     background: rgba(51,232,128, .5);
 }
 
-#reset{
+.manipulation{
     cursor: pointer;
     color: white;
     align-self: center;

@@ -3,10 +3,26 @@ $(function () {
     var workBtn = document.getElementById("work");
     var playBtn = document.getElementById("play");
     var resetBtn = document.getElementById("reset");
+    var pauseBtn = document.getElementById("pause");
 
     var countdown = 30 * 60 * 1000;
 
+    var running = true;
+    var timerId = setInterval(timer, 1000);
+
     $("#work").addClass("greenbg");
+
+    pauseBtn.addEventListener("click", function () {
+        if (running) {
+            $("#pause").html("RESUME");
+            running = false;
+            clearInterval(timerId);
+        } else {
+            $("#pause").html("PAUSE");
+            running = true;
+            timerId = setInterval(timer, 1000);
+        }
+    });
 
     workBtn.addEventListener("click", function () {
         $("#work").addClass("greenbg");
@@ -14,6 +30,9 @@ $(function () {
 
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
+
+        clearInterval(timerId);
+        timerId = setInterval(timer, 1000);
     });
 
     playBtn.addEventListener("click", function () {
@@ -22,6 +41,9 @@ $(function () {
 
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
+
+        clearInterval(timerId);
+        timerId = setInterval(timer, 1000);
     });
 
     resetBtn.addEventListener("click", function () {
@@ -29,7 +51,7 @@ $(function () {
         $("#clock").html("30:00");
     })
 
-    var timerId = setInterval(function () {
+    function timer() {
         countdown -= 1000;
         var min = Math.floor(countdown / (60 * 1000));
         //var sec = Math.floor(countdown - (min * 60 * 1000));  // wrong
@@ -46,7 +68,7 @@ $(function () {
             if (sec < 10) {
                 sec = "0" + sec;
             }
-            if(min < 10){
+            if (min < 10) {
                 min = "0" + min;
             }
             $("#clock").html(min + ":" + sec);
@@ -54,6 +76,7 @@ $(function () {
             document.title = Math.ceil(min) + " minutes left";
         }
 
-    }, 1000);
+    }
+
 
 });
