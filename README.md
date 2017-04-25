@@ -5,4 +5,4 @@ It uses the magic 30/30 that keeps you very productive
 
 ## version
 
-1.0.0
+1.0.1
