@@ -60,7 +60,6 @@ body {
     display: inline-block;
     cursor: pointer;
     color: white;
-    font-size: 18px;
     font-family:'Roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 16px 33px;
@@ -95,4 +94,19 @@ body {
 
 .greenbg{
     background: rgba(51,232,128, .5);
+}
+
+@media only screen and (max-width: 1000px) {
+    body{
+        font-size: 1.7em;
+    }
+
+    .button{
+        font-size: 1.7em;
+    }
+
+    .manipulation{
+        font-size: 1.2em;
+        min-width: 300px;
+    }
 }
