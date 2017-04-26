@@ -10,7 +10,7 @@ $(function () {
     var running = true;
     var timerId = setInterval(timer, 1000);
 
-    var audio = new Audio('sound/done.mp3');
+    var audio = new Audio('sound/done.wav');
 
     var mode = "Work";
 
@@ -94,6 +94,7 @@ $(function () {
         if (countdown <= 0) {
             $("#work").toggleClass("greenbg");
             $("#play").toggleClass("greenbg");
+             $("#container").toggleClass("playbg");
 
             audio.play();
 
@@ -109,7 +110,7 @@ $(function () {
             }
             $("#clock").html(min + ":" + sec);
 
-            document.title = mode + " for " + Math.round(min + (sec / 100)) + " minutes";
+            document.title = mode + " for " + Math.round(min + (sec / 60)) + " minutes";
         }
 
     }
