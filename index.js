@@ -15,8 +15,6 @@ $(function () {
     var mode = "Work";
 
     $("#work").addClass("greenbg");
-    $("body").addClass("playbg");
-    $("body").addClass("workbg");
 
     pauseBtn.addEventListener("click", function () {
         if (running) {
@@ -39,6 +37,7 @@ $(function () {
         $("#play").removeClass("greenbg");
 
         $("#container").removeClass("playbg");
+
 
         mode = "Work";
 
