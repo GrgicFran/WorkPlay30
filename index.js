@@ -10,6 +10,10 @@ $(function () {
     var running = true;
     var timerId = setInterval(timer, 1000);
 
+    var audio = new Audio('sound/done.mp3');
+
+    var mode = "Work";
+
     $("#work").addClass("greenbg");
     $("body").addClass("playbg");
     $("body").addClass("workbg");
@@ -33,8 +37,10 @@ $(function () {
     workBtn.addEventListener("click", function () {
         $("#work").addClass("greenbg");
         $("#play").removeClass("greenbg");
-        
+
         $("#container").removeClass("playbg");
+
+        mode = "Work";
 
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
@@ -50,6 +56,8 @@ $(function () {
         $("#work").removeClass("greenbg");
 
         $("#container").addClass("playbg");
+
+        mode = "Play";
 
         countdown = 30 * 60 * 1000;
         $("#clock").html("30:00");
@@ -87,6 +95,8 @@ $(function () {
             $("#work").toggleClass("greenbg");
             $("#play").toggleClass("greenbg");
 
+            audio.play();
+
             $("#clock").html("30:00");
             countdown = 30 * 60 * 1000;
             //doSomething();
@@ -99,7 +109,7 @@ $(function () {
             }
             $("#clock").html(min + ":" + sec);
 
-            document.title = Math.ceil(min) + " minutes left";
+            document.title = mode + " for " + Math.round(min + (sec / 100)) + " minutes";
         }
 
     }
